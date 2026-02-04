@@ -1,0 +1,126 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #ffebee, #fce4ec); /* soft pink gradient */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #880e4f; /* deep pink for general text */
+}
+
+.container {
+    text-align: center;
+    background-color: white;
+    padding: 50px 60px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(233, 30, 99, 0.25); /* soft pink shadow */
+    border: 2px solid #f8bbd0; /* light pink border */
+    max-width: 500px;
+}
+
+h1 {
+    font-size: 3.8em;
+    margin: 0 0 15px 0;
+    color: #d81b60;          /* vibrant Valentine pink */
+    text-shadow: 2px 2px 8px rgba(233, 30, 99, 0.4);
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+p {
+    font-size: 1.8em;
+    margin: 0 0 35px 0;
+    color: #c2185b;          /* slightly darker pink */
+    font-weight: 500;
+}
+
+.buttons {
+    position: relative;
+    display: inline-block;
+    min-height: 180px;
+    min-width: 340px;
+    margin-top: 20px;
+}
+
+button {
+    padding: 14px 32px;
+    font-size: 1.4em;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+#yesBtn {
+    background: linear-gradient(45deg, #ff4081, #f50057); /* hot pink gradient */
+    color: white;
+}
+
+#noBtn {
+    background: linear-gradient(45deg, #757575, #bdbdbd);
+    color: white;
+    position: absolute;           /* already had this from before */
+    transition: all 0.4s ease-out;
+    /* You can keep left/top at 50% initially if you want it centered under text at start */
+    left: 50%;
+    top: 70%;                     /* starts a bit below the question text */
+    transform: translate(-50%, -50%);
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Make Yes button look even more inviting when it grows */
+#yesBtn {
+    transition: all 0.4s ease;
+}
+/* Optional: Heart pulse animation on the title */
+@keyframes heartbeat {
+    0% { transform: scale(1); }
+    25% { transform: scale(1.08); }
+    50% { transform: scale(1); }
+    75% { transform: scale(1.06); }
+    100% { transform: scale(1); }
+}
+
+h1 {
+    animation: heartbeat 2.5s infinite ease-in-out;
+}
+
+/* Optional: Add tiny floating hearts in background (very subtle) */
+body::before {
+    content: "❤️ 💕 💖";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.07;
+    font-size: 3rem;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: -1;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+.cute-gif {
+    max-width: 180px;          /* or 220px – adjust to taste */
+    height: auto;
+    margin: 0 auto 20px;
+    display: block;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(233, 30, 99, 0.3); /* soft pink shadow */
+}
+.question-wrapper {
+    position: relative;           /* ← No button will position relative to this */
+    display: inline-block;
+    min-width: 300px;             /* give it some breathing room */
+    min-height: 100px;
+    text-align: center;
+    margin: 30px auto;
+}
